@@ -23,6 +23,8 @@ Use CamelRun's hosted agent, web search/fetch, shared native volume, native sche
 
 Search reservations in the prompt are a conservative instruction, not a hard billing guarantee. The configured $8 agent spend limit is for model usage over the agent's lifetime, not monthly total operating costs. It must not be described as a $50 monthly all-cost cap. No auto top-up or credit purchase is enabled by this project.
 
+Per-request search counts, response-round/time/context overrides and output-token overrides have been removed at the owner's request. Platform/provider ceilings and existing financial safeguards still apply. Research requests in native Slack conversations get an immediate acknowledgment through the native `send_message` tool, followed by the automatic final reply. Background scans stay quiet.
+
 ## Setup for maintainers
 
 Deploy `agent.yaml` with the official CamelRun CLI. Its Cloudflare and Slack credential variables must come from a secure environment, never the repository or conversation. The signed-in console can save these native tool sources with credentials sealed. When updating existing sources without changing their destination, omit auth/headers to preserve stored credentials. A redacted `auth: {type: bearer}` response is not a valid deployment credential. Inline the prompt and OpenAPI spec when using native browser deployment tools without secrets.

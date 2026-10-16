@@ -4,7 +4,7 @@
   "digestHour": 9,
   "channelName": "mentioned",
   "scanEverySeconds": 1800,
-  "searchesPerScan": 3,
+  "searchesPerScan": null,
   "searchBudgetUsd": 30,
   "monthlyBudgetUsd": 50,
   "products": [

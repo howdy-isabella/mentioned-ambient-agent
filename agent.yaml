@@ -3,17 +3,12 @@ name: Mentioned
 description: Finds public mentions of CamelAI and its products, remembers posts already found, and prepares a concise Slack digest.
 model: openai/gpt-6-luna
 thinkingLevel: low
-maxOutputTokens: 1800
 systemPromptFile: prompts/mentioned.md
 builtins: [web_search, web_fetch, schedule]
 webSearch:
   providers: [parallel, brave, exa]
 fileTools: true
 codeMode: true
-runLimits:
-  maxResponses: 10
-  maxSeconds: 120
-  contextTokens: 20000
 applyOnUpdate: true
 mounts:
   - volumeId: vol_d477dc5af311b2ff120847e2
