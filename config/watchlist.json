@@ -1,0 +1,102 @@
+{
+  "name": "mentioned",
+  "timezone": "America/Chicago",
+  "digestHour": 9,
+  "channelName": "mentioned",
+  "scanEverySeconds": 1800,
+  "searchesPerScan": 3,
+  "searchBudgetUsd": 30,
+  "monthlyBudgetUsd": 50,
+  "products": [
+    {
+      "name": "camelAI",
+      "aliases": [
+        "camelAI",
+        "camelai.com"
+      ],
+      "urls": [
+        "https://camelai.com",
+        "https://github.com/qaml-ai/camelAI",
+        "https://github.com/qaml-ai/qaml-api-dashboard",
+        "https://github.com/qaml-ai/chiridion-app"
+      ]
+    },
+    {
+      "name": "camelRun",
+      "aliases": [
+        "camelRun",
+        "run.camelai.com",
+        "camelai.com/run",
+        "github.com/qaml-ai/run"
+      ],
+      "urls": [
+        "https://run.camelai.com",
+        "https://camelai.com/run",
+        "https://github.com/qaml-ai/run"
+      ]
+    },
+    {
+      "name": "camelStream",
+      "aliases": [
+        "camelStream",
+        "camelai.com/stream",
+        "stream.camelai.com"
+      ],
+      "urls": [
+        "https://camelai.com/stream",
+        "https://stream.camelai.com"
+      ]
+    },
+    {
+      "name": "camelBot",
+      "aliases": [
+        "camelBot",
+        "bot.camelai.com",
+        "camelai.com/discord",
+        "camelai.com/bot"
+      ],
+      "urls": [
+        "https://bot.camelai.com",
+        "https://camelai.com/discord",
+        "https://camelai.com/bot"
+      ]
+    },
+    {
+      "name": "camelCode",
+      "aliases": [
+        "camelCode",
+        "camelai.com/code"
+      ],
+      "urls": [
+        "https://camelai.com/code"
+      ]
+    }
+  ],
+  "ownedDomains": [
+    "camelai.com"
+  ],
+  "ownedSocialAccounts": [],
+  "repositories": [
+    "qaml-ai/run",
+    "qaml-ai/camelAI",
+    "qaml-ai/qaml-api-dashboard",
+    "qaml-ai/chiridion-app"
+  ],
+  "sitemap": "https://camelai.com/sitemap.xml",
+  "queries": [
+    "\"camelAI\" OR \"camelai.com\" -site:camelai.com -site:camel-ai.org -site:camel-ai.com",
+    "\"camelRun\" OR \"run.camelai.com\" OR \"camelai.com/run\" -site:camelai.com",
+    "\"camelStream\" OR \"stream.camelai.com\" OR \"camelai.com/stream\" -site:camelai.com",
+    "\"camelBot\" OR \"bot.camelai.com\" OR \"camelai.com/discord\" -site:camelai.com",
+    "\"camelCode\" OR \"camelai.com/code\" -site:camelai.com",
+    "\"github.com/qaml-ai/run\" OR \"github.com/qaml-ai/camelAI\" OR \"github.com/qaml-ai/qaml-api-dashboard\" OR \"github.com/qaml-ai/chiridion-app\" -site:github.com/qaml-ai",
+    "site:reddit.com \"camelai\" OR \"camelRun\" OR \"camelStream\" OR \"camelBot\" OR \"camelCode\"",
+    "site:news.ycombinator.com \"camelai\" OR \"camelRun\" OR \"camelStream\"",
+    "site:x.com \"camelai.com\" OR \"camelRun\" OR \"camelStream\" OR \"camelBot\" OR \"camelCode\"",
+    "site:twitter.com \"camelai.com\" OR \"camelRun\" OR \"camelStream\"",
+    "site:linkedin.com/posts \"camelai\" OR \"camelRun\" OR \"camelStream\"",
+    "site:github.com \"camelai.com\" OR \"qaml-ai/run\" -repo:qaml-ai/run",
+    "site:bsky.app \"camelai\" OR \"camelRun\" OR \"camelStream\"",
+    "\"camelai.com\" review OR tutorial OR discussion -site:camelai.com"
+  ]
+}
