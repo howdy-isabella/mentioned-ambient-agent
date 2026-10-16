@@ -1,0 +1,30 @@
+{
+  "openapi": "3.0.3",
+  "info": {"title": "Mentioned daily digest", "version": "1.0.0", "description": "Native CamelRun OpenAPI tool configuration. Sends only to the approved #mentioned channel."},
+  "servers": [{"url": "https://slack.com/api"}],
+  "paths": {
+    "/chat.postMessage": {
+      "post": {
+        "operationId": "post_digest",
+        "description": "Post one top-level daily digest to #mentioned. Use only for DAILY_DIGEST or an explicitly authorized setup delivery test. Check result.ok is true and save result.ts before marking delivered. Never use this for background scan notifications or ordinary Slack replies.",
+        "requestBody": {
+          "required": true,
+          "content": {"application/json": {"schema": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["channel", "text", "unfurl_links", "unfurl_media"],
+            "properties": {
+              "channel": {"type": "string", "enum": ["C0C9YNEHPBK"]},
+              "text": {"type": "string", "maxLength": 4000},
+              "unfurl_links": {"type": "boolean", "enum": [false]},
+              "unfurl_media": {"type": "boolean", "enum": [false]}
+            }
+          }}}
+        },
+        "responses": {"200": {"description": "Slack response. HTTP 200 alone does not prove delivery: inspect ok, error, channel and ts.", "content": {"application/json": {"schema": {
+          "type": "object", "properties": {"ok": {"type": "boolean"}, "error": {"type": "string"}, "channel": {"type": "string"}, "ts": {"type": "string"}}
+        }}}}}
+      }
+    }
+  }
+}

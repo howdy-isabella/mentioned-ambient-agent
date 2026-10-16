@@ -15,9 +15,29 @@ runLimits:
   maxSeconds: 120
   contextTokens: 20000
 applyOnUpdate: true
+mounts:
+  - volumeId: vol_d477dc5af311b2ff120847e2
+    path: /monitor
+    subpath: mentioned
+    mode: rw
+mcpServers:
+  - name: cloudflare
+    url: https://mcp.cloudflare.com/mcp
+    auth: {type: bearer, token: "${CLOUDFLARE_MCP_TOKEN}"}
+    allowTools: [search, execute, docs]
+    fileArguments: "off"
+    exposure: both
+    timeoutMs: 60000
+openApi:
+  - name: slack_digest
+    specFile: config/slack-digest.openapi.json
+    auth: {type: bearer, token: "${MENTIONED_SLACK_BOT_TOKEN}"}
+    allowTools: [post_digest]
+    exposure: both
 agents:
   - key: mentioned
     name: Mentioned
     ttlSeconds: null
+    remount: true
     spendLimit:
       usd: 8
