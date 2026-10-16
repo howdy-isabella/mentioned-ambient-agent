@@ -8,10 +8,15 @@ Updated October 16, 2026.
 - First live baseline: completed successfully. Three native web searches, durable files initialized, no verified external mention links from that limited batch. Recorded search reservations $0.021; reported model cost $0.001733305. No search errors. This is not evidence of complete internet coverage.
 - Native background schedule: active every 30 minutes, schedule `50632c22-04ee-4894-88be-426f428ea70a`, with history omitted and state kept in native files.
 - Native daily task: first wake-up October 17, 2026, at 09:00 America/Chicago (`2026-10-17T14:00:00Z`), schedule `4a333b3b-12e6-4764-b54f-31db202facc2`. The prompt asks the agent to schedule each next local 09:00 with a native one-off schedule, avoiding a fixed UTC repeat across daylight saving changes.
-- Slack: Mentioned app installed in CamelAI after user approval. Bot username `mentioned-bot`, display name Mentioned. Native CamelRun connection prepared; awaiting approval to transfer the bot token/signing secret directly into CamelRun. No credentials are stored in this repository.
+- Slack: Mentioned app installed in CamelAI after user approval. Installed bot username `mentioned-bot` (renamed so the channel can use `mentioned`). Native CamelRun connection saved as `ch_740f53be22c8ac59cd52`, with the Mentioned definition and Isabella's sender allowlist. Slack verified the native request URL, and `app_mention`, `message.im` and `message.channels` subscriptions were saved. No credentials are stored in this repository.
+- Slack channel: [#mentioned](https://app.slack.com/client/T06MAAEU52A/C0C9YNEHPBK), created and bot listed in Agents & apps. Two real @mention tests did not receive replies or create channel-thread agents; native channel mention support is not verified. DMs did work. A support request records the evidence without claiming a root cause.
+- Native Slack DM round trip: verified at 12:42 p.m. Central. The bot replied "Connected to CamelRun." to the connection test. CamelRun created the native DM conversation agent `client_b63f4e1896869b998657aa16c5b755e41e316a5d`. This confirms incoming and outgoing DM delivery, not shared monitor state or top-level digest support.
 - Cloudflare: optional, not connected.
 - GitHub repository: public [howdy-isabella/mentioned-ambient-agent](https://github.com/howdy-isabella/mentioned-ambient-agent), using this local folder.
 - Native scheduled Slack delivery and shared monitor routing: [qaml-ai/run#171](https://github.com/qaml-ai/run/issues/171).
 - Native monthly all-cost budget: [qaml-ai/run#172](https://github.com/qaml-ai/run/issues/172).
+- Channel @mention delivery diagnostic, with working DM control test: [qaml-ai/run#173](https://github.com/qaml-ai/run/issues/173).
+
+No paid credit purchase or auto top-up was enabled. The existing prepaid starter balance is the current funding limit; recurring operation can stop when credit runs out. The requested monthly budget is not claimed to be platform-enforced.
 
 The requested full Slack behavior is not live. Changes to this file must distinguish prepared configuration, successful tests, and actual running delivery.
