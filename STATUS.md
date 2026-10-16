@@ -21,6 +21,8 @@ Updated October 16, 2026.
 - Native scheduled Slack delivery and shared monitor routing: [qaml-ai/run#171](https://github.com/qaml-ai/run/issues/171), updated with the working native shared-volume/OpenAPI composition. Direct channel-to-existing-agent binding is still a product request; shared state no longer requires that feature.
 - Native monthly all-cost budget: [qaml-ai/run#172](https://github.com/qaml-ai/run/issues/172).
 - Channel @mention delivery diagnostic, with working DM control test: [qaml-ai/run#173](https://github.com/qaml-ai/run/issues/173).
+- Native end-to-end monitoring health and missed-check/digest alerts: [qaml-ai/run#175](https://github.com/qaml-ai/run/issues/175). Existing schedule failure records do not by themselves establish successful search and digest delivery.
+- Native saved search plans and auditable product/source coverage: [qaml-ai/run#176](https://github.com/qaml-ai/run/issues/176). Current query rotation and lookbacks are agent instructions, not a platform-enforced coverage checklist. Search providers are ordered fallbacks, not simultaneous independent coverage of every engine.
 
 No paid credit purchase or auto top-up was enabled. The console showed approximately $4.98 in remaining starter credit during the final tests. The existing prepaid balance is the current funding limit; recurring operation can stop when credit runs out. The requested monthly budget is not claimed to be platform-enforced.
 
